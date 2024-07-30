@@ -2,85 +2,85 @@
 		COLOR Blue
 ==============================*/
 ::selection {
-  background: #007bff;
+  background: #90EBFF;
 }
 
 a, a:focus {
-  color: #007bff;
+  color: #90EBFF;
 }
 
 a:hover, a:active {
-  color: #006adb;
+  color: #90EBFF;
 }
 
 .primary-menu ul.navbar-nav > li:hover > a:not(.btn), .primary-menu ul.navbar-nav > li > a.active:not(.btn) {
-  color: #007bff;
+  color: #90EBFF;
 }
 .primary-menu ul.navbar-nav > li.dropdown .dropdown-menu li:hover > a:not(.btn) {
-  color: #007bff;
+  color: #90EBFF;
 }
 .primary-menu.navbar-line-under-text ul.navbar-nav > li > a:not(.btn):after {
-  border-color: #007bff;
+  border-color: #90EBFF;
 }
 
 /*=== Side Navigation ===*/
 .idocs-navigation .nav .nav .nav-item .nav-link.active:after, .idocs-navigation.docs-navigation-dark .nav .nav .nav-item .nav-link.active:after {
-  border-color: #007bff;
+  border-color: #90EBFF;
 }
 
 /* Accordion & Toggle */
 .accordion .card-header a:hover.collapsed {
-  color: #007bff !important;
+  color: #90EBFF !important;
 }
 .accordion:not(.accordion-alternate) .card-header a {
-  background-color: #007bff;
+  background-color: #90EBFF;
   color: #fff;
 }
 
 /* Nav */
 .nav:not(.nav-pills) .nav-item .nav-link.active, .nav:not(.nav-pills) .nav-item .nav-link:hover {
-  color: #007bff;
+  color: #90EBFF;
 }
 
 .nav-tabs .nav-item .nav-link.active {
   color: #0c2f55;
 }
 .nav-tabs .nav-item .nav-link.active:after {
-  background-color: #007bff;
+  background-color: #90EBFF;
 }
 .nav-tabs .nav-item .nav-link:not(.active):hover {
-  color: #007bff;
+  color: #90EBFF;
 }
 .nav-tabs.flex-column .nav-item .nav-link.active {
-  color: #007bff;
+  color: #90EBFF;
 }
 
 .nav-pills .nav-link:not(.active):hover {
-  color: #007bff;
+  color: #90EBFF;
 }
 
 #footer .nav .nav-item .nav-link:focus {
-  color: #007bff;
+  color: #90EBFF;
 }
 #footer .nav .nav-link:hover {
-  color: #007bff;
+  color: #90EBFF;
 }
 #footer .footer-copyright .nav .nav-link:hover {
-  color: #007bff;
+  color: #90EBFF;
 }
 
 /* Back to Top */
 #back-to-top:hover {
-  background-color: #007bff;
+  background-color: #90EBFF;
 }
 
 /* Extras */
 .bg-primary, .badge-primary {
-  background-color: #007bff !important;
+  background-color: #90EBFF !important;
 }
 
 .text-primary, .btn-light, .btn-outline-light:hover, .btn-link, .btn-outline-light:not(:disabled):not(.disabled).active, .btn-outline-light:not(:disabled):not(.disabled):active {
-  color: #007bff !important;
+  color: #90EBFF !important;
 }
 
 .btn-link:hover {
@@ -100,12 +100,12 @@ a.bg-primary:focus, a.bg-primary:hover, button.bg-primary:focus, button.bg-prima
 }
 
 .border-primary {
-  border-color: #007bff !important;
+  border-color: #90EBFF !important;
 }
 
 .btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #90EBFF;
+  border-color: #90EBFF;
 }
 .btn-primary:hover {
   background-color: #006adb;
@@ -123,18 +123,18 @@ a.bg-primary:focus, a.bg-primary:hover, button.bg-primary:focus, button.bg-prima
 }
 
 .btn-outline-primary, .btn-outline-primary:not(:disabled):not(.disabled).active, .btn-outline-primary:not(:disabled):not(.disabled):active {
-  color: #007bff;
-  border-color: #007bff;
+  color: #90EBFF;
+  border-color: #90EBFF;
 }
 .btn-outline-primary:hover, .btn-outline-primary:not(:disabled):not(.disabled).active:hover, .btn-outline-primary:not(:disabled):not(.disabled):active:hover {
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #90EBFF;
+  border-color: #90EBFF;
   color: #fff;
 }
 
 .progress-bar,
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link, .dropdown-item.active, .dropdown-item:active {
-  background-color: #007bff;
+  background-color: #90EBFF;
 }
 
 .page-item.active .page-link,
@@ -142,17 +142,17 @@ a.bg-primary:focus, a.bg-primary:hover, button.bg-primary:focus, button.bg-prima
 .custom-control-input:checked ~ .custom-control-label::before,
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label:before,
 .custom-control-input:checked ~ .custom-control-label:before {
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #90EBFF;
+  border-color: #90EBFF;
 }
 
 .list-group-item.active {
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #90EBFF;
+  border-color: #90EBFF;
 }
 
 .page-link {
-  color: #007bff;
+  color: #90EBFF;
 }
 .page-link:hover {
   color: #006adb;
