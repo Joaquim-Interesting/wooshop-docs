@@ -79,21 +79,24 @@
       <ul class="nav flex-column ">
         <li class="nav-item"><a class="nav-link active" href="#idocs_start">Getting Started</a>
           <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#idocs_requirements">Requirements</a></li>
             <li class="nav-item"><a class="nav-link" href="#idocs_installation">Installation</a></li>
-            <li class="nav-item"><a class="nav-link" href="#idocs_html_structure">HTML Structure</a></li>
-            <li class="nav-item"><a class="nav-link" href="#idocs_sass">Sass</a></li>
-            <li class="nav-item"><a class="nav-link" href="#idocs_color_schemes">Color Schemes</a></li>
-            <li class="nav-item"><a class="nav-link" href="#idocs_theme_customization">Customization</a></li>
-            <li class="nav-item"><a class="nav-link" href="#idocs_logo_settings">Logo Settings</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_logo">Logo Settings</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_info">App Infomation</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_android">Android Setup</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_ios">IOS Setup</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a class="nav-link" href="#idocs_layout">Layout</a>
+        <li class="nav-item"><a class="nav-link" href="#parse_server">Parse Server</a>
           <ul class="nav flex-column">
-			<li class="nav-item"><a class="nav-link" href="#idocs_header">Header</a></li>
-			<li class="nav-item"><a class="nav-link" href="#idocs_navbar">Navbar</a></li>
-			<li class="nav-item"><a class="nav-link" href="#idocs_sidebar">Sidebar</a></li>
-			<li class="nav-item"><a class="nav-link" href="#idocs_footer">Footer</a></li>
-			<li class="nav-item"><a class="nav-link" href="#idocs_box_layout">Box Layout</a></li>
+            <li class="nav-item"><a class="nav-link" href="#back4app">Back4app</a></li>
+            <li class="nav-item"><a class="nav-link" href="#app_config">Configuring The App</a></li>
+            <li class="nav-item"><a class="nav-link" href="#parse_config">Config Parameters</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#email_apis">Email APIs</a>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#sendgrid">SendGrid (E-mail)</a></li>
           </ul>
         </li>
         <li class="nav-item"><a class="nav-link" href="#idocs_content">Content</a>
@@ -157,97 +160,438 @@
         </section>
         
 		<hr class="divider">
+
+         <!-- Requirements
+		============================ -->
+    <section id="idocs_requirements">
+      <h2>Requirements</h2>
+      <p class="h5">Install or Update flutter</p>
+      <p>Since this project is developed with Flutter, make sure to correctly install flutter and dart in your computer. 
+      If you need help to install flutter <a class="btn btn-primary" href="https://docs.flutter.dev/get-started/install" target="_blank" rel="Flutter">Click to Install Flutter</a></p>
+      
+      <br><hr>
+
+      <p class="h5">IDE or Text Editor</p>
+      <p>For all intallation process you will need an IDE oa a text editor, You can use Android Studio or 
+        Visual Studio Code, make sure to use latest versions.</p>
+        <p><a class="btn btn-primary" href="https://developer.android.com/studio" target="_blank" rel="Adroid Studio">Install Android Studio</a> or 
+          <a class="btn btn-primary" href="https://code.visualstudio.com/" target="_blank" rel="Visual Studio Code">Install Visual Studio Code</a></p>
+
+          <p class="alert alert-warning">For this documentation we've used <a target="_blank" href="https://developer.android.com/studio"> Android Studio</a>.</p>  
+      
+    </section>
+
+    <hr class="divider">
 		
         <!-- Installation
 		============================ -->
         <section id="idocs_installation">
           <h2>Installation</h2>
-          <p class="lead">Follow the steps below to setup your site template:</p>
-          <ol>
-            <li>Unzip the downloaded package and open the <strong>/HTML</strong> folder to find all the template files. You will need to upload these files to your hosting web server using FTP or localhost in order to use it on your website.</li>
-            <li>Below is the folder structure and needs to be uploaded to your website or localhost root directory:
-            <ul>
-			<li><code>HTML/assets</code> - Contains all of the assets referenced
-			  <ul>
-                <li><code>HTML/css</code> - Stylesheet files</li>
-                <li><code>HTML/images</code> - Images files</li>
-                <li><code>HTML/js</code> - Javacript files</li>
-                <li><code>HTML/sass</code> - Sass files</li>
-                <li><code>HTML/vendor</code> – All external libs.</li>
-              </ul>
-			</li>
-			<li><code>HTML/index.html</code> - Homepage
-			</ul>
-            </li>
-            <li>You should upload all or specific HTML files as per your need.</li>
-            <li>You are good to go for adding your content now!</li>
-          </ol>
+
+          <p class="h5">Import and Setup Project</p>
+
+          <ol type="1" start="1">
+            <li>Extract Zip file Downloaded from codecanyon</li>
+            <li>Navigate to <strong>wooshop_app.zip</strong> file and extract it too</li>
+            <li>Open android Studio to Import the project</li>
+            <li>Click on <strong>Import Android Studio project</strong></li>
+            <li>Navigate to extracted wooshop_app folder</li>
+            <li>Click in <strong>OK</strong> or <strong>import</strong> then wait for Android Studio to load and setup all files and index them.</li>
+            <li>Open terminal or cmd</li>
+            <li>In your project root run <code>flutter pub get</code> and wait to finish</li>
+          </ol>  
+
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7e90gBu4pas" allowfullscreen></iframe>
+          </div>
+
         </section>
-        
-		<hr class="divider">
-		
-        <!-- HTML Structure
+
+        <hr class="divider">
+
+          <!--Logo Settings
+    ============================ -->
+    <section id="idocs_logo">
+      <h2>Logo Settings</h2>
+      
+      <p class="h5">Customize Logo and Splash</p>
+      <ol type="1">
+        <li>Go to <strong>assets>images</strong> and override <strong>icon.png</strong> and <strong>icon_dark.png</strong> with your own Logos</li>
+        <li>In your project root from terminal run <code>flutter pub run flutter_native_splash:create</code></li>
+      </ol>
+    </section>
+
+
+    <hr class="divider">
+
+    <!--App Infomation
+    ============================ -->
+    <section id="idocs_info">
+    <h2>App Infomation</h2>
+ 
+      <p class="h5">Update App's information</p>
+      <p>Open the file <strong>app_info.dart</strong> located in the folder <strong>lib/configurations/</strong>, and fill the info listed bellow:</p>  
+      
+      <ul>
+        <li><strong>appName</strong> - your app's name</li>
+        <li><strong>appVersion</strong> - your app's version</li>
+        <li><strong>packageName</strong> - your app's package name</li>
+        <li><strong>packageNameAndroid</strong> - your app's package name</li>
+        <li><strong>appBundleID</strong> - your app's bundle identifier for IOS</li>
+        <li><strong>initialCountry</strong> - your country's code</li>
+        <li><strong>initialDialCode</strong> - your country's dial code</li>
+        <li><strong>initialIsoCode</strong> - your country's iso code</li>
+        <li><strong>defaultLanguage</strong> - your defult app's language</li>
+        <li><strong>helpCenterUrl</strong> - your app's help center url</li>
+        <li><strong>privacyPolicyUrl</strong> - your app's privacy and policy url</li>
+        <li><strong>termsOfUseUrl</strong> - your app's terms and conditions url</li>
+      </ul> 
+    </section>
+
+
+    <hr class="divider">
+
+         <!--Android setup
 		============================ -->
-        <section id="idocs_html_structure">
-          <h2>HTML Structure</h2>
-          <p>iDocs follows a simple and easy to customize coding structure. Here is the sample for your reference:<br>
-            The template is based on <a class="ml-1" target="_blank" href="https://getbootstrap.com/"><i class="fas fa-external-link-alt"></i> Bootstrap Framework</a></p>
-          <pre><code class="html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
+    <section id="idocs_android">
+      <h2>Android Setup</h2>
+       
+        <p class="h5">Android App - update package name and app's name</p>
+        <br>
 
-&lt;!-- Your Title, Description, Stylesheets
-============================================= --&gt;
+        <p><strong>Change app's package name</strong></p>
+        <ol type="1" start="1">
+          <li>Open terminal or cmd</li>
+          <li>In your project root run <code>flutter pub run change_app_package_name:main com.your.package.name</code></li>
+        </ol>
 
-&lt;/head&gt;
+        <p><strong>Change app's name</strong></p>
 
-&lt;body data-spy=&quot;scroll&quot; data-target=&quot;.idocs-navigation&quot; data-offset=&quot;125&quot;&gt;
+        <ol type="1" start="1">
+          <li>Open the file <strong>strings.xml</strong> located in the folder <strong>android/app/src/res/values/</strong></li>
+          <li>Rplace the first string value <strong>WooShop</strong> by your app's name: <code>&lt;string name="app_name"&gt;your_app_name&lt;/string&gt;</code></li>
+        </ol>
+    </section>
 
-&lt;!-- Document Wrapper   
-=============================== --&gt;
-&lt;div id=&quot;main-wrapper&quot;&gt; 
-  
-  &lt;!-- Header
-  ============================ --&gt;
-  &lt;header id=&quot;header&quot; class=&quot;sticky-top&quot;&gt;
-   ......
-  &lt;/header&gt;
-  &lt;!-- Header End --&gt; 
-  
-  &lt;!-- Content
-  ============================ --&gt;
-  &lt;div id=&quot;content&quot; role=&quot;main&quot;&gt; 
+    <hr class="divider">
+
+         <!--IOS setup
+		============================ -->
+    <section id="idocs_ios">
+      <h2>IOS Setup</h2>
+       
+      <p class="h5">IOS App - update bundle identifier and app's name</p>
+      <br>
+
+      <p class="alert alert-warning">Setting up an iOS app requires the use of macOS, as it provides the necessary tools and software, such as Xcode, for building and testing iOS Apps.</p>
     
-    &lt;!-- Sidebar Navigation
-    ============================ --&gt;
-    &lt;div class=&quot;idocs-navigation bg-light&quot;&gt;
-     .....
-    &lt;/div&gt;
-    
-    &lt;!-- Docs Content
-    ============================ --&gt;
-    &lt;div class=&quot;idocs-content&quot;&gt;
-      &lt;div class=&quot;container&quot;&gt;
-        .......
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;!-- Content end --&gt; 
-  
-  &lt;!-- Footer --&gt;
-  &lt;footer id=&quot;footer&quot; class=&quot;section bg-dark footer-text-light&quot;&gt;
-    &lt;div class=&quot;container&quot;&gt; ...... &lt;/div&gt;
-  &lt;/footer&gt;
-  &lt;!-- Footer end --&gt; 
-  
-&lt;/div&gt;
-&lt;!-- Document Wrapper end --&gt; 
+      <p><strong>Change app's bundle identifier</strong></p>
+      <ol type="1" start="1">
+        <li>Open the projects <strong>ios/</strong> folder in Xcode</li>
+        <li>In Xcode, navigate to the <strong>Runner project</strong> in the project navigator</li>
+        <li>Select the <strong>Runner</strong> target</li>
+        <li>Go to the <strong>General</strong> tab</li>
+        <li>Update the Bundle Identifier to your new identifier (e.g., com.yourcompany.newapp)</code></li>
+      </ol>
 
-&lt;!-- JavaScript --&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-          <p class="alert alert-info">If you need more information, please visit bootstrap site: <a target="_blank" href="https://getbootstrap.com/docs/4.4/layout/grid/">https://getbootstrap.com</a></p>
-        </section>
+      <p><strong>Change app's name</strong></p>
+
+      <ol type="1" start="1">
+        <li>Open the file <strong>Info.plist</strong> located in the folder <strong>ios/Runner/Info.plist</strong></li>
+        <li>Find the key <strong>CFBundleNam</strong> and update its value to your new app name</li>
+      
+          <pre><code>
+              &lt;key&gt;CFBundleName&lt;/key&gt;
+              &lt;string&gt;NewAppName&lt;/string&gt;
+          </pre></code>
+          
+        <li>In the same file, you may also need to update the display name if it’s different from CFBundleName</li>
+
+          <pre><code>
+            &lt;key&gt;CFBundleDisplayName&lt;/key&gt;
+            &lt;string&gt;NewAppName&lt;/string&gt;
+          </pre></code>
+      </ol>
+
+    </section>
+
+    <hr class="divider">
+
+         <!--Parse Server
+		============================ -->
+    <section id="parse_server">
+      <h2>Parse Server</h2>
+      <p class="h5 font-weight-300">Setup guide on configuring parse server installation for the app.</p>
+
+      <p class="alert alert-info">Parse server is a Back-end as a service plataform, it was used as the back-end server of your app.</p>
+    </section>
+
+    <hr class="divider">
+
+         <!-- Back4app
+		============================ -->
+    <section id="back4app">
+      <h4>Back4app</h4>
+
+      <p class="alert alert-info">Back4app was used to install the Parse server for your app.</p>
+  
+      <p>Go to <a href="http://back4app.com" target="_blank" rel="noopener noreferrer">back4app.com</a> signup and Create a project.</p>
+    
+      <p><strong>Get a Back4app Keys</strong> </p>
+      <ol>
+        <li>Access your parse server settings: <strong>App Settings > Security & Keys</strong></li>
+        <li>Copy the <strong>Application ID</strong>, <strong>Client key</strong> and <strong>Master key</strong></li>
+        <li>Save it, we will use it later</li>
+      </ol>
+
+      <br>
+
+      <p><strong>Setup Live Query Url</strong> </p>
+      <ol>
+        <li>Access your parse server settings: <strong>App Settings > Sever Settings</strong></li>
+        <li>Click on <strong>Server URL and Live Query</strong> settings</li>
+        <li>Enter your desired url and save</li>
+        <li>Save it, we will use it later</li>
+      </ol>
+
+      <br>
+
+      <p><strong>Setup Cloud Code</strong> </p>
+      <ol>
+        <li>Unzip the file <strong>parse_server_config_files.zip</strong> Main files folder downloaded from codecanyon</li>
+        <li>Access your parse server cloud code: <strong>Cloud Code > Functions & Web Hosting</strong></li>
+        <li>Delete the <strong>main.js</strong> file</li>
+        <li>Upload the file <strong>package.json</strong> located in <strong>parse_server_config_files/Cloud code files/package.json</strong></li>
+        <li>Upload the file <strong>main.js</strong> located in <strong>parse_server_config_files/Cloud code files/package.json</strong></li>
+        <li>Click <strong>Deploy</strong></li>
+      </ol>
+
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7e90gBu4pas" allowfullscreen></iframe>
+      </div>
+      
+    </section>
+
+    <hr class="divider">
+
+         <!--Configuring the app
+		============================ -->
+    <section id="app_config">
+      <h4>Configuring The App</h4>
+      <p>Open the file <strong>app_config.dart</strong> located in the folder <strong>lib/configurations/</strong>, and fill the info listed bellow:</p></p>
+    
+      <ul>
+        <li><strong>serverUrl</strong> - your parse server url (e.g: For back4app is <strong>https://parseapi.back4app.com/)</strong></li>
+        <li><strong>liveQueryUrl</strong> - your parse server livequery url</li>
+        <li><strong>appId</strong> - your parse server App Id</li>
+        <li><strong>clientKey</strong> - your parse server client key</li>
+      </ul> 
+
+    </section>
+
+    <hr class="divider">
+
+         <!--Server Config
+		============================ -->
+    <section id="parse_config">
+      <h4>Parse server config config parameters</h4>
+
+      <p><strong>Create Parse Server parameters</strong> </p>
+        <ol>
+          <li>On your Parse server Dashboard go to <strong>More>config</strong>, and add the following parameters:</li>
+         
+
+          <table class="table table-bordered mt-5">
+            <thead class="bg-dark text-light">
+              <tr>
+                <td>Parameter name</td>
+                <td>Description</td>
+                <td>Data type</td>
+                <td>Value</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>agora_app_id</strong></td>
+                <td>Used to save the Agora.io App Id</td>
+                <td>String</td>
+                <td>Agora.io App Id</td>
+              </tr>
+              <tr>
+                <td><strong>appleLoginEnabled</strong></td>
+                <td>Used to enable or disable Apple Login</td>
+                <td>Boolean</td>
+                <td>true/false</td>
+              </tr>
+              <tr>
+                <td><strong>appSendGridEmail</strong></td>
+                <td>Used to save the sendgrid sender email</td>
+                <td>String</td>
+                <td>sendgrid sender email</td>
+              </tr>
+              <tr>
+                <td><strong>cashOnDeliveryEnabled</strong></td>
+                <td>Used to enable or disable Cash on delivery payment method</td>
+                <td>Boolean</td>
+                <td>true/false</td>
+              </tr>
+              <tr>
+                <td><strong>facebookLoginEnabled</strong></td>
+                <td>Used to enable or disable Facebook Login</td>
+                <td>Boolean</td>
+                <td>true/false</td>
+              </tr>
+              <tr>
+                <td><strong>googleAdsEnabled</strong></td>
+                <td>Used to enable or disable Google ads</td>
+                <td>Boolean</td>
+                <td>true/false</td>
+              </tr>
+              <tr>
+                <td><strong>googleAndApplePayGetWayEnabled</strong></td>
+                <td>Used to enable or disable Google and Apple pay payment getway</td>
+                <td>Boolean</td>
+                <td>true/false</td>
+              </tr>
+              <tr>
+                <td><strong>googleLoginEnabled</strong></td>
+                <td>Used to enable or disable Google login</td>
+                <td>Boolean</td>
+                <td>true/false</td>
+              </tr>
+              <tr>
+                <td><strong>paypalGatWayEnabled</strong></td>
+                <td>Used to enable or disable Paypal payment getway</td>
+                <td>Boolean</td>
+                <td>true/false</td>
+              </tr>
+              <tr>
+                <td><strong>paypalSandboxMode</strong></td>
+                <td>Used to enable or disable Paypal Sandbox mode </td>
+                <td>Boolean</td>
+                <td>true/false</td>
+              </tr>
+              <tr>
+                <td><strong>phoneLoginEnabled</strong></td>
+                <td>Used to enable or disable Phone number login</td>
+                <td>Boolean</td>
+                <td>true/false</td>
+              </tr>
+              <tr>
+                <td><strong>stripePaymentGetWayEnabled</strong></td>
+                <td>Used to enable or disable Stripe payment getway</td>
+                <td>Boolean</td>
+                <td>true/false</td>
+              </tr>
+              <tr>
+                <td><strong>paypalClientId</strong></td>
+                <td>Used to save the Paypal client id</td>
+                <td>String</td>
+                <td>Paypal client id</td>
+              </tr>
+              <tr>
+                <td><strong>paypalSecretKey</strong></td>
+                <td>Used to save the Paypal secret key</td>
+                <td>String</td>
+                <td>Paypal secret key</td>
+              </tr>
+              <tr>
+                <td><strong>sellerEarningsPercent</strong></td>
+                <td>Used to save the seller earning percentage </td>
+                <td>String</td>
+                <td>A number between 1 - 100</td>
+              </tr>
+              <tr>
+                <td><strong>sendGridApiKey</strong></td>
+                <td>Used to save the Sendgrid API key</td>
+                <td>String</td>
+                <td>Sendgrid API key</td>
+              </tr>
+              <tr>
+                <td><strong>stripePublishableKey</strong></td>
+                <td>Used to save the Stripe published key</td>
+                <td>String</td>
+                <td>Stripe published key</td>
+              </tr>
+              <tr>
+                <td><strong>stripeSecretKey</strong></td>
+                <td>Used to save the Stripe secret key</td>
+                <td>String</td>
+                <td>Stripe secret key</td>
+              </tr>
+            </tbody>
+         </table>
+        </ol>
+
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7e90gBu4pas" allowfullscreen></iframe>
+        </div>
+    </section>
+          
+      <hr class="divider">
+
+         <!--Email APIs
+		============================ -->
+    <section id="email_apis">
+      <h2>Email APIs</h2>
+      <p class="h5 font-weight-300">Setup guide on configuring email APIs services.</p>
+    </section>
+		
+    <hr class="divider">
+
+         <!--Send grid
+		============================ -->
+    <section id="sendgrid">
+        <h4>SendGrid</h4>  
+        <p class="alert alert-info">SendGrid is used to send E-mails from your app.</p>
+
+        <p>Go to <a href="http://sendgrid.com" target="_blank" rel="noopener noreferrer">sendgrid.com</a> and Login or Register.</p>
+    
+        <p><strong>Create a SendGrid API Key</strong> </p>
+        <ol>
+          <li>Click on <strong>Settings>API Keys</strong></li>
+          <li>Click on <strong>>Create API Key</strong> button</li>
+          <li>Enter a name for <strong>API Key</strong></li>
+          <li>Choose <strong>Full Access</strong></li>
+          <li>Click on <strong>Create and View</strong></li>
+          <li>Save it, we will use it later</li>
+        </ol>
+
+        <p><strong>Create a Sender</strong> </p>
+        <ol>
+          <li>Click on <strong>Settings>Sender</strong> Authentication</li>
+          <li>Click on <strong>Verify single sender</strong> button</li>
+          <li>Click on <strong>Create API Key</strong> button</li>
+          <li>Fill out the form and <strong>Create</strong></li>
+          <li>Save it, we will use it later</li>
+        </ol>
+
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7e90gBu4pas" allowfullscreen></iframe>
+        </div><br>
+
+        <p><strong>Add or Update SendGrid keys and Sender to Parse Server</strong> </p>
+        <ol>
+          <li>On your Parse server Dashboard go to <strong>More>config</strong></li>
+          <li>Add a parameter with the following info:
+            <ul>
+              <li><strong>Parameter name:</strong> sendGridApiKey</li>
+              <li><strong>Parameter type:</strong> String</li>
+              <li><strong>Parameter value:</strong> [The SendGrid API Key]</li>
+            </ul>  
+          </li>
+          <li>Add or Update another parameter with the following info:
+            <ul>
+              <li><strong>Parameter name:</strong> appSendGridEmail</li>
+              <li><strong>Parameter type:</strong> String</li>
+              <li><strong>Parameter value:</strong> [The SendGrid Sender Email]</li>
+            </ul>  
+          </li>
+        </ol>
+
+      <br>
+    
+    </section>
         
 		<hr class="divider">
 		        
