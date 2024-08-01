@@ -99,6 +99,32 @@
             <li class="nav-item"><a class="nav-link" href="#sendgrid">SendGrid (E-mail)</a></li>
           </ul>
         </li>
+        <li class="nav-item"><a class="nav-link" href="#video_streaming">Video Streaming</a>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#agora">Agora</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#firebase">Firebase</a>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#firebase_setup">Setup</a></li>
+            <li class="nav-item"><a class="nav-link" href="#flutter_fire">Flutterfire Configure</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#push_notification">Push Notification</a>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#service_account">Service account</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sender_id">Sender ID and WebPushCertificates</a></li>
+            <li class="nav-item"><a class="nav-link" href="#ios_setup">IOS Configuration</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#social_login">Social Login</a>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#google_login">Google</a></li>
+            <li class="nav-item"><a class="nav-link" href="#apple_login">Apple</a></li>
+            <li class="nav-item"><a class="nav-link" href="#facebook_login">Facebook</a></li>
+            <li class="nav-item"><a class="nav-link" href="#phone_login">Phone Number</a></li>
+          </ul>
+        </li>
         <li class="nav-item"><a class="nav-link" href="#idocs_content">Content</a>
 			<ul class="nav flex-column">
             <li class="nav-item"><a class="nav-link" href="#idocs_typography">Typography</a></li>
@@ -256,16 +282,16 @@
     <section id="idocs_android">
       <h2>Android Setup</h2>
        
-        <p class="h5">Android App - update package name and app's name</p>
+        <p class="h5">How to update package name and app's name?</p>
         <br>
 
-        <p><strong>Change app's package name</strong></p>
+        <p><strong>Step 1 - Change app's package name</strong></p>
         <ol type="1" start="1">
           <li>Open terminal or cmd</li>
           <li>In your project root run <code>flutter pub run change_app_package_name:main com.your.package.name</code></li>
         </ol>
 
-        <p><strong>Change app's name</strong></p>
+        <p><strong>Step 2 - Change app's name</strong></p>
 
         <ol type="1" start="1">
           <li>Open the file <strong>strings.xml</strong> located in the folder <strong>android/app/src/res/values/</strong></li>
@@ -280,12 +306,12 @@
     <section id="idocs_ios">
       <h2>IOS Setup</h2>
        
-      <p class="h5">IOS App - update bundle identifier and app's name</p>
+      <p class="h5">How to update bundle identifier and app's name?</p>
       <br>
 
       <p class="alert alert-warning">Setting up an iOS app requires the use of macOS, as it provides the necessary tools and software, such as Xcode, for building and testing iOS Apps.</p>
     
-      <p><strong>Change app's bundle identifier</strong></p>
+      <p><strong>Step 1 - Change app's bundle identifier</strong></p>
       <ol type="1" start="1">
         <li>Open the projects <strong>ios/</strong> folder in Xcode</li>
         <li>In Xcode, navigate to the <strong>Runner project</strong> in the project navigator</li>
@@ -294,7 +320,7 @@
         <li>Update the Bundle Identifier to your new identifier (e.g., com.yourcompany.newapp)</code></li>
       </ol>
 
-      <p><strong>Change app's name</strong></p>
+      <p><strong>Step 2 - Change app's name</strong></p>
 
       <ol type="1" start="1">
         <li>Open the file <strong>Info.plist</strong> located in the folder <strong>ios/Runner/Info.plist</strong></li>
@@ -331,13 +357,13 @@
          <!-- Back4app
 		============================ -->
     <section id="back4app">
-      <h4>Back4app</h4>
+      <h4>How to setup a parse server in Back4app?</h4>
 
       <p class="alert alert-info">Back4app was used to install the Parse server for your app.</p>
   
       <p>Go to <a href="http://back4app.com" target="_blank" rel="noopener noreferrer">back4app.com</a> signup and Create a project.</p>
     
-      <p><strong>Get a Back4app Keys</strong> </p>
+      <p><strong>Step 1 - Get a Back4app Keys</strong> </p>
       <ol>
         <li>Access your parse server settings: <strong>App Settings > Security & Keys</strong></li>
         <li>Copy the <strong>Application ID</strong>, <strong>Client key</strong> and <strong>Master key</strong></li>
@@ -346,7 +372,7 @@
 
       <br>
 
-      <p><strong>Setup Live Query Url</strong> </p>
+      <p><strong>Step 2 - Setup Live Query Url</strong> </p>
       <ol>
         <li>Access your parse server settings: <strong>App Settings > Sever Settings</strong></li>
         <li>Click on <strong>Server URL and Live Query</strong> settings</li>
@@ -356,7 +382,7 @@
 
       <br>
 
-      <p><strong>Setup Cloud Code</strong> </p>
+      <p><strong>Step 3 - Setup Cloud Code</strong> </p>
       <ol>
         <li>Unzip the file <strong>parse_server_config_files.zip</strong> Main files folder downloaded from codecanyon</li>
         <li>Access your parse server cloud code: <strong>Cloud Code > Functions & Web Hosting</strong></li>
@@ -374,10 +400,10 @@
 
     <hr class="divider">
 
-         <!--Configuring the app
+    <!--Configuring the app
 		============================ -->
     <section id="app_config">
-      <h4>Configuring The App</h4>
+      <h4>How to connect parse server to the App?</h4>
       <p>Open the file <strong>app_config.dart</strong> located in the folder <strong>lib/configurations/</strong>, and fill the info listed bellow:</p></p>
     
       <ul>
@@ -394,9 +420,8 @@
          <!--Server Config
 		============================ -->
     <section id="parse_config">
-      <h4>Parse server config config parameters</h4>
+      <h4>How to create parse server config parameters?</h4>
 
-      <p><strong>Create Parse Server parameters</strong> </p>
         <ol>
           <li>On your Parse server Dashboard go to <strong>More>config</strong>, and add the following parameters:</li>
          
@@ -528,7 +553,7 @@
         </div>
     </section>
           
-      <hr class="divider">
+    <hr class="divider">
 
          <!--Email APIs
 		============================ -->
@@ -542,12 +567,12 @@
          <!--Send grid
 		============================ -->
     <section id="sendgrid">
-        <h4>SendGrid</h4>  
+        <h4>How to setup SendGrid service?</h4>  
         <p class="alert alert-info">SendGrid is used to send E-mails from your app.</p>
 
         <p>Go to <a href="http://sendgrid.com" target="_blank" rel="noopener noreferrer">sendgrid.com</a> and Login or Register.</p>
     
-        <p><strong>Create a SendGrid API Key</strong> </p>
+        <p><strong>Step 1 - Create a SendGrid API Key</strong> </p>
         <ol>
           <li>Click on <strong>Settings>API Keys</strong></li>
           <li>Click on <strong>>Create API Key</strong> button</li>
@@ -557,7 +582,7 @@
           <li>Save it, we will use it later</li>
         </ol>
 
-        <p><strong>Create a Sender</strong> </p>
+        <p><strong>Step 2 - Create a Sender</strong> </p>
         <ol>
           <li>Click on <strong>Settings>Sender</strong> Authentication</li>
           <li>Click on <strong>Verify single sender</strong> button</li>
@@ -570,10 +595,10 @@
           <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7e90gBu4pas" allowfullscreen></iframe>
         </div><br>
 
-        <p><strong>Add or Update SendGrid keys and Sender to Parse Server</strong> </p>
+        <p><strong>Step 3 - Add or Update SendGrid keys and Sender to Parse Server</strong> </p>
         <ol>
           <li>On your Parse server Dashboard go to <strong>More>config</strong></li>
-          <li>Add a parameter with the following info:
+          <li>Add or Update a parameter with the following info:
             <ul>
               <li><strong>Parameter name:</strong> sendGridApiKey</li>
               <li><strong>Parameter type:</strong> String</li>
@@ -592,58 +617,433 @@
       <br>
     
     </section>
+
+    <hr class="divider">
+
+     <!--Video Streaming
+		============================ -->
+    <section id="video_streaming">
+      <h2>Video Streaming</h2>
+      <p class="h5 font-weight-300">Here is a setup guide on configuring live streaming.</p>
+    </section>
+		
+    <hr class="divider">
+
+    <!--Agora
+		============================ -->
+    <section id="agora">
+        <h4>How to setup Agora (live streaming) service?</h4>  
+        <p class="alert alert-info">Agora is used as third party provider live streaming.</p>
+
+        <p>Go to <a href="https://agora.io" target="_blank" rel="Agora">agora.io</a> and Login or Register.</p>
+    
+        <p><strong>Step 1 - Create an app</strong> </p>
+        <ol>
+          <li>Create new app</li>
+          <li>Choose <strong>Testing mode: APP ID</strong></li>
+          <li>Copy App ID</li>
+          <li>Save it, we will use it later</li>
+        </ol>
+
+        <p><strong>Step 2 - Add or Update Agora app id to Parse Server</strong> </p>
+        <ol>
+          <li>On your Parse server Dashboard go to <strong>More>config</strong></li>
+          <li>Add or Update a parameter with the following info:
+            <ul>
+              <li><strong>Parameter name:</strong> agora_app_id</li>
+              <li><strong>Parameter type:</strong> String</li>
+              <li><strong>Parameter value:</strong> [The Agora App Id]</li>
+            </ul>  
+          </li>
+        </ol>
+
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7e90gBu4pas" allowfullscreen></iframe>
+        </div><br>
+
+      <br>
+    
+    </section>
+
+    <hr class="divider">
+
+     <!--Firebase
+		============================ -->
+    <section id="firebase">
+      <h2>Firebase</h2>
+      <p class="h5 font-weight-300">Here is a setup guide on configuring Firebase.</p>
+    </section>
+		
+    <hr class="divider">
+
+         <!--Firebase Setup
+		============================ -->
+    <section id="firebase_setup">
+        <h4>How to setup Firebase?</h4>  
+        <p class="alert alert-info">Firebase is used for analytics, push notification and social logins.</p>
+
+        <p><strong>Create a firebase project</strong> </p>
+        <ol>
+          <li>Go to <a href="https://console.firebase.google.com/u/0/" target="_blank" rel="Firebase Console">Firebase developer console</a> and click <strong>create a project</strong> button.</li>
+          <li>Enter the your project name</li>
+          <li>Enable Google Analytics for your project</li>
+          <li>Choose or create a Google Analytics account</li>
+          <li>click <strong>Create project</strong> button</li>
+        </ol>
+    
+    </section>
+
+    <hr class="divider">
+
+     <!--Firebase
+		============================ -->
+    <section id="firebase">
+      <h2>Firebase</h2>
+      <p class="h5 font-weight-300">Here is a setup guide on configuring Firebase.</p>
+    </section>
+
+    <hr class="divider">
+
+         <!--Flutterfire Configure
+		============================ -->
+    <section id="flutter_fire">
+        <h4>How to setup firebase in the App?</h4>  
+
+        <p>Go to <a href="https://firebase.google.com/docs/cli#install_the_firebase_cli" target="_blank" rel="Agora">Firebase CLI installation</a> to install the <strong>firebase cli</strong> in your Computer, and login using the <strong>cli</strong>.</p>
+  
+        <ol>
+          <li>Open the project's root in the <strong>terminal</strong> or <strong>cmd</strong></li>
+          <li>Run the following command to install <strong>Flutterfire</strong>: <code>dart pub global activate flutterfire_cli</code>.</li>
+          <li>Run the `configure` command, select your Firebase project and platforms: <code>flutterfire configure</code></li>
+        </ol>
+
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7e90gBu4pas" allowfullscreen></iframe>
+        </div><br>
+
+      <br>
+    
+    </section>
+
+    <hr class="divider">
+		        
+		<!-- Push Notification
+		============================ -->
+    <section id="push_notification">
+      <h2>Push notification</h2>
+      <p class="h5 font-weight-300">Here is a setup guide on configuring push notification.</p>
+    </section>
+        
+    <hr class="divider">
+
+         <!-- Service Account
+		============================ -->
+    <section id="service_account">
+        <h4>How to create and setup a Service account?</h4>  
+
+        <p><strong>Step 1 - Create a Service Account</strong> </p>
+        <ol>
+          <li>Go to <a href="https://console.firebase.google.com/u/0/" target="_blank" rel="Firebase Console">Firebase developer console</a>.</li>
+          <li>Select Your Project by clicking on the project you want to create a service account for</li>
+          <li>In the left-hand menu, click on the gear icon next to <strong>Project Overview</strong> and select <strong>Project settings</strong>.</li>
+          <li>In the Project settings page, click on the <strong>Cloud Messaging</strong> tab, and click on <strong>Manage Service Accounts</strong> link</li>
+          <li>In next page click on the <strong>+ CREATE SERVICE ACCOUNT</strong> button and follow the steps bellow:
+            <ul>
+              <li>Enter service account <strong>name</strong> and <strong>description</strong>, and click on the <strong>CREATE AND CONTINUE</strong> button</li>
+              <li>Select the role <strong>Owner</strong> and click on the <strong>CONTINUE</strong> button.</li>
+              <li>Click on the <strong>DONE</strong> button.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <p><strong>Step 2 - Add a key</strong> </p>
+        <ol>
+          <li>Click on the created service account's <strong>Action icon</strong> and select the option <strong>Manage keys</strong>.</li>
+          <li>Click on the <strong>ADD KEY</strong> button and select the option <strong>Create new key</strong></li>
+          <li>Select <strong>JSON</strong> and click on the <strong>Create</strong> button.</li>
+          <li>The JSON file will be downloaded automatically. Save this file in a secure location.</li>
+        </ol>
+
+        <p><strong>Step 3 - Add service account to the app</strong> </p>
+
+        <p>Open the file <strong>app_config.dart</strong> located in the folder <strong>lib/configurations/</strong>, and fill the info listed bellow:</p></p>
+    
+        <ul>
+          <li><strong>serviceAccountJson</strong> - your service account json file's content</strong></li>
+          <li><strong>firebaseProjectId</strong> - your firebase project's id (you may find it in the service account json file)</li>
+        </ul>   
+
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7e90gBu4pas" allowfullscreen></iframe>
+        </div><br>
+
+      <br>
+    
+    </section>
+
+    <hr class="divider">
+		        
+		<!-- Sender ID and WebPushCertificate
+		============================ -->
+        <section id="sender_id">
+          <h4>How to configure the sender Sender ID and WebPushCertificates?</h4>
+
+        <p><strong>Step 1 - Get sender Sender ID and WebPushCertificates from firebase console</strong> </p>
+        <ol>
+          <li>Go to <a href="https://console.firebase.google.com/u/0/" target="_blank" rel="Firebase Console">Firebase developer console</a>.</li>
+          <li>Select Your Project</li>
+          <li>In the left-hand menu, click on the gear icon next to <strong>Project Overview</strong> and select <strong>Project settings</strong>.</li>
+          <li>In the Project settings page, click on the <strong>Cloud Messaging</strong> tab.</li>
+          <li>Copy the <strong>Sender ID</strong> and save it</li>
+          <li>Scroll down to <strong>Web configuration</strong> click on <strong>Generate key pair</strong> button.</li>
+          <li>Copy the <strong>Key pair</strong> and save it</li>
+        </ol>
+
+        <p><strong>Step 2 - Add Sender ID and WebPushCertificate to the app</strong> </p>
+
+        <p>Open the file <strong>app_config.dart</strong> located in the folder <strong>lib/configurations/</strong>, and fill the info listed bellow:</p></p>
+    
+        <ul>
+          <li><strong>pushGcm</strong> - your firebase project's Sender ID</strong></li>
+          <li><strong>webPushCertificate</strong> - your firebase project's key pair</li>
+        </ul>
+
+        </section>
         
 		<hr class="divider">
 		        
-		<!-- Sass
+		<!-- IOS Setup
 		============================ -->
-        <section id="idocs_sass">
-          <h2>Sass</h2>
-          <p>We have added SASS <code>.scss</code> files in template. If you know how to use SASS you can change sass files and compile the css as well.
-            You can find sass file here - <code>HTML/assets/sass</code></p>
-          <p>Open the <code>sass/_variables.scss</code> and Edit the values according to your needs. If you need more Advanced Setup then you can Edit the Respective Files yourself which have been branched inside the same Folder. It is completely at your discretion only to include the Required <code>.scss</code> Files you need to minimize the amount of CSS & including only the Styles of the Blocks you need. This can be setup in your <code>stylesheet.scss</code> File.</p>
-        </section>
+    <section id="ios_setup">
+      <h4>How to setup IOS push notification?</h4>
+
+      <p><strong>Step 1 - Create an App ID</strong> </p>
+      <ol>
+        <li>Go to <a href="https://developer.apple.com/account/" target="_blank" rel="Apple developer account">Apple Developer Account</a> and log in with your Apple Developer credentials.</li>
+        <li>Go to Certificates, Identifiers & Profiles:
+          <ul>
+            <li>In the left-hand menu, click on <strong>Certificates, Identifiers & Profiles</strong>.</li>
+          </ul>
+        </li>
+        <li>Create a New App ID:
+          <ul>
+            <li>Under <strong>Identifiers</strong>, click on the <strong>+</strong> button to create a new App ID.</li>
+            <li>Fill in the necessary details like the App Name and Bundle ID (e.g., com.example.myapp).</li>
+            <li>Ensure that <strong>Push Notifications</strong> is selected under the App Services section.</li>
+            <li>Click "Continue" and then <strong>Register</strong> to create the App ID.
+            </li>
+          </ul>
+        </li>
+      </ol>
+
+      <p><strong>Step 2 - Generate a Certificate Signing Request (CSR)</strong> </p>
+      <ol>
+        <li>Open Keychain Access:
+          <ul>
+            <li>On your Mac, open the Keychain Access application (you can find it via Spotlight Search or in the Utilities folder)</li>
+          </ul>
+        </li>
+        <li>Generate CSR:
+          <ul>
+            <li>In the Keychain Access menu, select <strong>"Keychain Access" > "Certificate Assistant" > "Request a Certificate from a Certificate Authority"</strong>.</li>
+            <li>Enter your email address, and name, and select <strong>Saved to disk</strong>.</li>
+            <li>Click <strong>Continue</strong> and save the CSR file (e.g., CertificateSigningRequest.certSigningRequest).</li>
+          </ul>
+        </li>
+      </ol>
+
+      <p><strong>Step 3 - Create the APNs Certificate</strong> </p>
+      <ol>
+        <li>Go to Certificates Section:
+          <ul>
+            <li>In the Apple Developer Account, go back to <strong>"Certificates, Identifiers & Profiles"</strong>.</li>
+          </ul>
+        </li>
+        <li>Add a New Certificate:
+          <ul>
+            <li>Select <strong>"Apple Push Notification service SSL (Sandbox & Production)"</strong> and click <strong>"Continue"</strong>.</li>
+            <li>Choose your App ID from the list and click <strong>"Continue"</strong>.</li>
+          </ul>
+        </li>
+        <li>Upload CSR:
+          <ul>
+            <li>Upload the CSR file you generated earlier and click <strong>"Continue"</strong>.</li>
+          </ul>
+        </li>
+        <li>Download Certificate:
+          <ul>
+            <li>Once the certificate is created, download the <strong>.cer</strong> file.</li>
+          </ul>
+        </li>
+      </ol>
+
+      <p><strong>Step 4 - Install the APNs Certificate</strong> </p>
+      <ol>
+        <li>Open the .cer File:
+          <ul>
+            <li>Double-click the downloaded <strong>.cer</strong> file to install it in your Keychain Access.</li>
+          </ul>
+        </li>
+        <li>Export the Certificate:
+          <ul>
+            <li>In Keychain Access, find the installed certificate (it will have the name "Apple Development iOS Push Services" or similar).</li>
+            <li>Right-click the certificate and select <strong>"Export"</strong>.</li>
+            <li>Save the certificate as a <strong>.p12</strong> file and set a password when prompted.</li>
+          </ul>
+        </li>
+      </ol>
+
+      <p><strong>Step 5 - Upload the APNs Certificate to firebase console</strong> </p>
+        <ol>
+          <li>Go to <a href="https://console.firebase.google.com/u/0/" target="_blank" rel="Firebase Console">Firebase developer console</a>.</li>
+          <li>Select Your Project</li>
+          <li>In the left-hand menu, click on the gear icon next to <strong>Project Overview</strong> and select <strong>Project settings</strong>.</li>
+          <li>In the Project settings page, click on the <strong>Cloud Messaging</strong> tab.</li>
+          <li>Scroll down to <strong>Apple app configuration</strong>.</li>
+          <li>Find the <strong>APNs Certificates</strong> section</li>
+          <li>Upload the <strong>.p12</strong> for both <strong>development</strong> and <strong>production</strong></li>
+        </ol>
+
+    </section>
         
 		<hr class="divider">
 		
-		<!-- Color Schemes
+		<!-- Social Login
 		============================ -->
-        <section id="idocs_color_schemes">
-          <h2>Color Schemes</h2>
-          <p>You can change your Website's Color Scheme in an instant. We have build <strong>10 Color</strong> css file for change template primary color.</p>
-          <ul>
-            <li><code>color-blue.css</code> - Blue Color</li>
-            <li><code>color-brown.css</code> - Brown Color</li>
-            <li><code>color-cyan.css</code> - Cyan Color</li>
-            <li><code>color-green.css</code> - Green Color</li>
-            <li><code>color-orange.css</code> - Orange Color</li>
-            <li><code>color-indigo.css</code> - Indigo Color</li>
-            <li><code>color-purple.css</code> - Purple Color</li>
-            <li><code>color-red.css</code> - Red Color</li>
-            <li><code>color-teal.css</code> - Teal Color</li>
-            <li><code>color-yellow.css</code> - Yellow Color</li>
-          </ul>
-          <p>Simply add Color CSS file link it in the Document <code>&lt;head&gt;</code>.<br>
-            Make sure you add the <code>css/color-blue.css</code> stylesheet in your head after the <code>css/stylesheet.css</code> file linking from above mentioned 10 color css file.</p>
-          <p><strong>For Example:</strong></p>
-          <pre><code class="html">&lt;head&gt;
-&lt;!-- Stylesheet
-============================== --&gt;
-&lt;!-- Bootstrap --&gt;
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;
-&lt;!-- Font Awesome Icon --&gt;
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/vendor/font-awesome/css/all.min.css&quot; /&gt;
-&lt;!-- Magnific Popup --&gt;
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/vendor/magnific-popup/magnific-popup.min.css&quot; /&gt;
-&lt;!-- Highlight Syntax --&gt;
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/vendor/highlight.js/styles/github.css&quot; /&gt;
-&lt;!-- Custom Stylesheet --&gt;
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/css/stylesheet.css&quot; /&gt;
+    <section id="social_login">
+      <h2>Social Login Setup</h2>
+      <p class="h5 font-weight-300">WooShop comes with a lot of social login plugins, your users can register to your App with one click!
+        Here is a setup guide on configuring social login.</p>
+    </section>
 
-&lt;!-- Here goes your Colors Css --&gt;
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/css/color-orange.css&quot; /&gt;
-&lt;/head&gt;</code></pre>
-        </section>
+    <hr class="divider">
+		
+		<!-- Google Login
+		============================ -->
+    <section id="google_login">
+      <h4>How to setup Google social login plugin?</h4>
+
+      <p><strong>Step 1 - Add debug fingerprints to firebase</strong> </p>
+      <ol>
+        <li>Get fingerprints from your Android Studio <strong>debud keystore</strong>:
+          <ul>
+            <li>Run the Keytool Command</li>
+            <li>For macOS/Linux: <code>keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android
+            </code></li>
+            <li>For Windows: <code>keytool -list -v -keystore %USERPROFILE%\.android\debug.keystore -alias androiddebugkey -storepass android -keypass android
+            </code></li>
+          </ul>
+        </li>
+        <li>After running the appropriate command for your operating system, locate the <strong>SHA-1</strong>, <strong>SHA-256</strong> fingerprint in the output.</li>
+        <li>Go to <a href="https://console.firebase.google.com/u/0/" target="_blank" rel="Firebase Console">Firebase developer console</a>.</li>
+        <li>Select Your Project</li>
+        <li>In the left-hand menu, click on the gear icon next to <strong>Project Overview</strong> and select <strong>Project settings</strong>.</li>
+        <li>In <strong>General</strong> tab page scroll down to <strong>Your apps</strong> section</li>
+        <li>Click on <strong>Add fingerprint</strong>, paste the <strong>SHA-1</strong> and click on <strong>Save</strong>.</li>
+        <li>Click again on <strong>Add fingerprint</strong>, paste the <strong>SHA-256</strong> and click on <strong>Save</strong>.</li>
+      </ol>
+      
+      <p><strong>Step 2 - Enable Google login in firebase console</strong> </p>
+      <ol>
+        <li>Go to <a href="https://console.firebase.google.com/u/0/" target="_blank" rel="Firebase Console">Firebase developer console</a>.</li>
+        <li>Select Your Project</li>
+        <li>In the left-hand menu, expand the <strong>Build</strong> section and click <strong>Authentication</strong>.</li>
+        <li>In the Authentication page, click on the <strong>Get started</strong> button.</li>
+        <li>Click on <strong>Google</strong>, <strong>Enable</strong> and then click <strong>Save</strong></li>
+        <li>Download the new <strong>google-services.json</strong> and <strong>GoogleService-info.plist</strong></li>
+      </ol>
+
+      <p><strong>Step 3 - Setup Google login for Android</strong> </p>
+      <ol>
+        <li>Override the old file <strong>google-services.json</strong> by the new one in the following location: <strong>android/app/</strong>.</li>
+      </ol>
+
+      <p><strong>Step 4 - Setup Google login for IOS</strong> </p>
+      <ol>
+        <li>Override the old file <strong>GoogleService-info.plist</strong> by the new one in the following location: <strong>ios/Runner/</strong>.</li>
+        <li>Open the file <strong>GoogleService-info.plist</strong> and copy the content of the key <strong>REVERSED_CLIENT_ID</strong></li>
+
+        <pre><code>
+          &lt;key&gt;REVERSED_CLIENT_ID&lt;/key&gt;
+          &lt;string&gt;Copy the content from here&lt;/string&gt;
+        </pre></code>
+
+        <li>Open the file <strong>info.plist</strong> located in: <strong>ios/Runner/</strong>.</li>
+        <li>Paste the copied content on the first <strong>CFBundleURLSchemes</strong> value.</li>
+
+        <pre><code>
+          &lt;key&gt;CFBundleURLSchemes&lt;/key&gt;
+          &lt;array&gt;
+              &lt;string&gt;Paste content right here&lt;/string&gt;
+          &lt;/array&gt;
+        </pre></code>
+
+      </ol>
+
+    </section>
+
+    <hr class="divider">
+		
+		<!-- Apple Login
+		============================ -->
+    <section id="apple_login">
+      <h4>How to setup Apple social login plugin?</h4>
+      
+      <p><strong>Step 1 - Enable Google login in firebase console</strong> </p>
+      <ol>
+        <li>Go to <a href="https://console.firebase.google.com/u/0/" target="_blank" rel="Firebase Console">Firebase developer console</a>.</li>
+        <li>Select Your Project</li>
+        <li>In the left-hand menu, expand the <strong>Build</strong> section and click <strong>Authentication</strong>.</li>
+        <li>In the Authentication page, click on the <strong>Sign-in method</strong> tab.</li>
+        <li>Click on <strong>Add new provider</strong> then click on <strong>Apple</strong></li>
+        <li>Enable it and then click <strong>Save</strong>.</li>
+      </ol>
+
+      <p><strong>Step 2 - Enable Google login in parse server</strong> </p>
+      <ol>
+        <li>On your Parse server Dashboard go to <strong>App Settings>Server Settings>Apple Login>Settings</strong></li>
+        <li>Enter your app's <strong>Bundle ID</strong> and then click <strong>Save</strong>.</li>
+      </ol>
+
+    </section>
+
+    <hr class="divider">
+		
+		<!-- Facebook Login
+		============================ -->
+    <section id="facebook_login">
+      <h4>How to setup Facebook social login plugin?</h4>
+      
+    </section>
+
+    <hr class="divider">
+		
+		<!-- Phone Login
+		============================ -->
+    <section id="phone_login">
+      <h4>How to setup Phone Number login plugin?</h4>
+
+      <p><strong>Step 1 - Add debug fingerprints to firebase</strong> </p>
+      <ol>
+        <li>Get fingerprints from your Android Studio <strong>debud keystore</strong>:
+          <ul>
+            <li>Run the Keytool Command</li>
+            <li>For macOS/Linux: <code>keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android
+            </code></li>
+            <li>For Windows: <code>keytool -list -v -keystore %USERPROFILE%\.android\debug.keystore -alias androiddebugkey -storepass android -keypass android
+            </code></li>
+          </ul>
+        </li>
+        <li>After running the appropriate command for your operating system, locate the <strong>SHA-1</strong>, <strong>SHA-256</strong> fingerprint in the output.</li>
+        <li>Go to <a href="https://console.firebase.google.com/u/0/" target="_blank" rel="Firebase Console">Firebase developer console</a>.</li>
+        <li>Select Your Project</li>
+        <li>In the left-hand menu, click on the gear icon next to <strong>Project Overview</strong> and select <strong>Project settings</strong>.</li>
+        <li>In <strong>General</strong> tab page scroll down to <strong>Your apps</strong> section</li>
+        <li>Click on <strong>Add fingerprint</strong>, paste the <strong>SHA-1</strong> and click on <strong>Save</strong>.</li>
+        <li>Click again on <strong>Add fingerprint</strong>, paste the <strong>SHA-256</strong> and click on <strong>Save</strong>.</li>
+      </ol>
+      
+    </section>
         
 		<hr class="divider">
 		
@@ -1729,7 +2129,7 @@
 <!-- Document Wrapper end --> 
 
 <!-- Back To Top --> 
-<a class="bg-dark" id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a> 
+<a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a> 
 
 <!-- JavaScript
 ============================ -->
